@@ -72,6 +72,10 @@
       <Project>{04def79b-b470-45d5-8185-4f7f894b0dc7}</Project>
       <Name>SpaceTx.Actors</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SpaceTx.Screens\SpaceTx.Screens.csproj">
+      <Project>{b3f57e2c-8764-4869-b19f-a2c71599a1ed}</Project>
+      <Name>SpaceTx.Screens</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

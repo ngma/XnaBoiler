@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceTx.Game", "SpaceTx\Spa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceTx.Actors", "SpaceTx.Actors\SpaceTx.Actors.csproj", "{04DEF79B-B470-45D5-8185-4F7F894B0DC7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceTx.Screens", "SpaceTx.Screens\SpaceTx.Screens.csproj", "{B3F57E2C-8764-4869-B19F-A2C71599A1ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{04DEF79B-B470-45D5-8185-4F7F894B0DC7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{04DEF79B-B470-45D5-8185-4F7F894B0DC7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{04DEF79B-B470-45D5-8185-4F7F894B0DC7}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B3F57E2C-8764-4869-B19F-A2C71599A1ED}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

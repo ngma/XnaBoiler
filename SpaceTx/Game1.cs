@@ -1,9 +1,11 @@
 ﻿#region Using Statements
 
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SpaceTx.Actors;
+using SpaceTx.Screens;
 
 #endregion
 
@@ -16,12 +18,20 @@ namespace SpaceTx.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Sprite mSprite;
+        List<Sprite> _actors;
+        List<Screen> _screens = new List<Screen>();
 
         public Game1()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.ApplyChanges();
+
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            _actors = new List<Sprite>();
             Content.RootDirectory = "Content";
         }
 
@@ -34,7 +44,7 @@ namespace SpaceTx.Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            mSprite = new Sprite();
+            _screens.Add(new Screen(graphics));
             base.Initialize();
         }
 
@@ -45,8 +55,7 @@ namespace SpaceTx.Game
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            mSprite.LoadContent(this.GraphicsDevice, "sprite.png");
+            _screens.ForEach(x=>x.LoadContent(graphics.GraphicsDevice));
         }
 
         /// <summary>
@@ -67,7 +76,7 @@ namespace SpaceTx.Game
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -79,9 +88,8 @@ namespace SpaceTx.Game
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            mSprite.Draw(this.spriteBatch);
+            _screens.ForEach(x=>x.Draw(spriteBatch));
             spriteBatch.End();
             base.Draw(gameTime);
         }
